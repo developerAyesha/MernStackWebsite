@@ -1,0 +1,33 @@
+.contact{
+    padding: 20px  140px ;
+    color:white;
+}
+.con{
+    padding: 5px;
+    
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:50px;
+}
+.content{
+    padding-left: 10px;
+}
+.forms textarea{
+    margin-top: 10px;
+    border: none;
+    background-color:rgba(128, 128, 128, 0.305);
+    border-radius: 4px;
+}
+.submit{
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: rgb(53, 46, 182);
+    color:azure;
+    border:none;
+    border-radius: 2px;;
+    padding: 8px;
+
+}

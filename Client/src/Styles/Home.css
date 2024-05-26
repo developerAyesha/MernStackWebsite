@@ -1,0 +1,37 @@
+.Home{
+    padding: 20px 140px ;
+    color:white;
+}
+.con{
+    padding: 5px;
+    
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:50px;
+}
+.content{
+    padding-left: 10px;
+}
+.content p{
+    margin:5px;
+    font-size: 16px;
+}
+.content h1{
+    font-size: 50px;
+    font-weight:bold;
+}
+.submit{
+    width: 200px;
+    height: 40px;
+    margin-right:20px;
+   
+    background-color: rgb(53, 46, 182);
+    color:azure;
+    border:none;
+    border-radius: 2px;;
+    padding: 8px;
+
+
+}

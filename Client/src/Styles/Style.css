@@ -1,0 +1,48 @@
+body{
+    background-color: black;
+}
+.cotainer{
+    padding:150px;
+}
+.registerForm h1{
+    color:white;
+    text-decoration: underline;
+}
+.Register{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    padding: 0px;
+}
+.forms{
+    padding:10px;
+    margin:5px;
+
+}
+.forms label{
+    font-size: 25px;
+    color:white;
+    font-weight: 400;
+}
+.forms input{
+
+    height: 35px;
+    width:400px;
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+    background-color:rgba(128, 128, 128, 0.305);
+    margin-bottom: 5px;
+
+}
+.submit{
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: rgb(53, 46, 182);
+    color:azure;
+    border:none;
+    border-radius: 2px;;
+    padding: 8px;
+
+}
