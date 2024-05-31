@@ -1,6 +1,8 @@
 import '../Styles/Style.css';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom'
+import { toast } from 'react-toastify';
+
 
 function Register() {
     const [User, setUser] = useState({
@@ -32,16 +34,20 @@ function Register() {
             if (!response.ok) {
                 // Log the error response
                 const errorData = await response.json();
-                console.error("Error:", errorData);
+                toast.error(
+                    errorData
+                  );
                 return;
             }
             if(response.ok){
+                
                 setUser({
                     username:"",
                     email:"",
                     phone:"",
                     password:""
                 });
+                toast.success("Registration successful");
                 navigate("/Login")
             }
 
@@ -54,15 +60,23 @@ function Register() {
 
     return (
         <section>
-            <div className='container'>
-                <div className="Register">
-                    <div className="div-img">
-                        <img src="123.png" alt="img" height="500" width="500" />
-                    </div>
-                    <div className="registerForm">
-                        <h1>Registration Form</h1>
-                        <br />
-                        <form onSubmit={handleForm} className='forms'>
+            <main>
+          <div className="section-registration">
+            <div className="container grid grid-two-cols">
+              <div className="registration-image">
+                <img
+                  src="/images/register.png"
+                  alt="a girl is trying to do registration"
+                  width="500"
+                  height="500"
+                />
+              </div>
+              <div className="registration-form">
+                <h1 className="main-heading mb-3">registration form</h1>
+                <br />
+
+           
+                        <form onSubmit={handleForm} >
                             <label htmlFor="username">Username:</label>
                             <br />
                             <input
@@ -115,11 +129,14 @@ function Register() {
                                 onChange={handleInput}
                             />
                             <br />
-                            <button type='submit' className='submit'>Submit</button>
+                            <button type="submit" className="btn btn-submit">
+                    Register Now
+                  </button>
                         </form>
-                    </div>
-                </div>
+                        </div>
             </div>
+          </div>
+        </main>
         </section>
     );
 }

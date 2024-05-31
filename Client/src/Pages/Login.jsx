@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../Store/Auths';
-
+import { toast } from "react-toastify";
 function Login() {
     const [user, setUser] = useState({
         email: "",
@@ -31,12 +31,16 @@ function Login() {
 
             if (!response.ok) {
                 const errorData = await response.json();
+                toast.error(
+                    "invalid credential"
+                  );
                 console.error("Error:", errorData);
                 return;
             }
 
             const data = await response.json();
             const userToken = data.token;
+            toast.success("Login successful");
             storeToken(userToken);
             navigate("/");
         } catch (error) {
@@ -46,14 +50,23 @@ function Login() {
 
     return (
         <section>
-            <div className='cotainer'>
-                <div className="Register">
-                    <div className="div-img">
-                        <img src="123.png" alt="img" height={"300"} width={"400"} />
-                    </div>
-                    <div className="registerForm">
-                        <h1>Login Form</h1>
-                        <br />
+            <main>
+          <div className="section-registration">
+            <div className="container grid grid-two-cols">
+              <div className="registration-image">
+                <img
+                  src="/images/login.png"
+                  alt=" let's fill the login form "
+                  width="500"
+                  height="500"
+                />
+              </div>
+
+              {/* let tackle registration form  */}
+              <div className="registration-form">
+                <h1 className="main-heading mb-3">login form</h1>
+                <br />
+
                         <form action="" onSubmit={handleForm} className='forms'>
                             <label htmlFor="Email">Email:</label>
                             <br />
@@ -86,6 +99,7 @@ function Login() {
                     </div>
                 </div>
             </div>
+            </main>
         </section>
     );
 }

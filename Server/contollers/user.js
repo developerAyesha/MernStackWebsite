@@ -83,4 +83,18 @@ const login = async (req, res) => {
     }
 };
 
-module.exports = { register, login };
+
+// user data get logic
+
+const user=async(req,res)=>{
+ try {
+    console.log("user controller running");
+    const userData=req.user;
+    console.log(userData);
+    return res.status(200).json({userData})
+    
+ } catch (error) {
+    console.log("error from iser route",error);
+ }
+}
+module.exports = { register, login ,user};
