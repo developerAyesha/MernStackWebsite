@@ -42,6 +42,7 @@ textarea {
   line-height: 1.56;
   letter-spacing: 0.1rem;
   word-spacing: 0.06rem;
+  color:#646cff;
 }
 
 a {
@@ -50,6 +51,7 @@ a {
   letter-spacing: 0.1rem;
   color: var(--btn-color);
   text-decoration: inherit;
+  margin:5px;
 }
 
 li {
@@ -85,13 +87,16 @@ li {
 }
 
 /*? Module Rules / Reusable */
+td button {
+  background-color: #99b9ff;
+}
 button {
   text-transform: capitalize;
   padding: 1rem 2.2rem;
   font-size: 1.7rem;
   font-weight: 500;
-  color:white;
-  background-color: #646cff;
+  color:blue;
+  background-color:white;
   border-radius: 0.8rem;
   -webkit-border-radius: 0.8rem;
   -moz-border-radius: 0.8rem;
@@ -469,6 +474,10 @@ a.active {
   flex-wrap: wrap;
   gap: 2rem;
 }
+.admin-users div{
+  padding:5px;
+  
+}
 
 th {
   font-size: 1.8rem;
@@ -627,4 +636,7 @@ body tr {
       }
     }
   }
+}
+h1{
+  color:white;
 }
